@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: gateway-test
+service:
+  order:
+    url: http://localhost:7070
