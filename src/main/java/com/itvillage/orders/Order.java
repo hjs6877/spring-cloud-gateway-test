@@ -2,7 +2,8 @@ package com.itvillage.orders;
 
 import lombok.Getter;
 
-public class OrderResponse {
+@Getter
+public class Order {
     private Long orderId;
     private OrderState orderState;
 

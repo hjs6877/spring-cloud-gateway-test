@@ -4,3 +4,5 @@ spring:
 service:
   order:
     url: http://localhost:7070
+  delivery:
+    url: http://localhost:6060
