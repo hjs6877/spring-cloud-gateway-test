@@ -41,6 +41,8 @@ public class GatewayConfiguration {
                         .uri(orderServiceUrl))
                 .build();
     }
+
+    // example-3-combine-orderDetails: 주문 정보, 배달 정보를 조합해서 클라이언트에게 전송하기 위한 OrderHandler로의 라우팅
     @Bean
     public RouterFunction<ServerResponse> routeOrderHandler(OrderHandler orderHandler) {
         return RouterFunctions.route(GET("/orders/{order-id}"), orderHandler::getOrderDetails);

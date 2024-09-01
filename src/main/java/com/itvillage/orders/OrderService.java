@@ -1,5 +1,6 @@
 package com.itvillage.orders;
 
+import com.itvillage.delivery.Delivery;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -19,9 +20,7 @@ public class OrderService {
                 .build()
                 .expand(orderId)
                 .encode()
-                .toUri(); // http://localhost:7070/v1/orders/{order-id}
-
-        // TODO: Delivery 서비스 데이터를 가져온 후, OrderDetails로 response를 바꿔야 한다.
+                .toUri(); // http://localhost:7070/orders/{order-id}
 
         return WebClient.create()
                 .get()

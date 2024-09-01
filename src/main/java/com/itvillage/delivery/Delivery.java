@@ -6,6 +6,8 @@ import lombok.Getter;
 public class Delivery {
     private Long deliveryId;
     private Long orderId;
+    private Long deliveryRiderId;
+    private DeliveryState deliveryState;
 
     @Getter
     public enum DeliveryState {
