@@ -25,7 +25,7 @@ public class GatewayConfiguration {
                         .and()
                         .method(HttpMethod.GET)
                         .uri(orderServiceUrl))
-                .route(r -> r
+                .route(r -> r            // example-2-simple-1: 주문 ID에 해당하는 데이터를 조회하기 위한 단순 라우팅
                         .method(HttpMethod.GET)
                         .and()
                         .path("/orders/{order-id}")
@@ -33,7 +33,7 @@ public class GatewayConfiguration {
                                 .rewritePath("/orders/(?<orderId>\\d+)",
                                         "/orders/${orderId}"))
                         .uri(orderServiceUrl))
-                .route(r -> r
+                .route(r -> r    // example-2-simple-2: 회원 ID에 해당하는 주문 목록를 조회하기 위한 단순 라우팅
                         .method(HttpMethod.GET)
                         .and()
                         .path("/members/{member-Id}/orders")
