@@ -6,3 +6,5 @@ service:
     url: http://localhost:7070
   delivery:
     url: http://localhost:6060
+server:
+  max-http-request-header-size: 400000
