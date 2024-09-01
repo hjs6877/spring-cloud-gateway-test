@@ -9,10 +9,13 @@ public class Order {
 
     @Getter
     public enum OrderState {
-        ORDER_RECEIVED("주문 접수"),
-        PREPARING("조리 중"),
-        OUT_FOR_DELIVERY("배달 중"),
-        DELIVERED("배달 완료");
+        PENDING("주문 대기 중"),
+        CONFIRMED("주문 확인"),
+        PREPARING("음식 준비 중"),
+        READY_FOR_PICKUP("픽업 준비 완료"), // 픽업 준비 완료
+        DELIVERING("배달 중"),
+        COMPLETED("주문 완료"),
+        CANCELED ("주문 취소됨");
 
         private final String orderState;
 
