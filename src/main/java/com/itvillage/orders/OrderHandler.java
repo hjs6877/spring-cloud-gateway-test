@@ -8,8 +8,6 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
-import static org.springframework.web.reactive.function.server.EntityResponse.fromObject;
-
 @Slf4j
 @Component
 public class OrderHandler {
